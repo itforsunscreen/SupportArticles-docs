@@ -83,7 +83,12 @@ To control how the indexer treats specific file types, open **Indexing Options**
 
 ##### Defragment the index database  
 
-You can use this approach to reclaim empty space within the index database. Open an administrative Command Prompt window, and then run the following commands in the given order: **Sc config wsearch start=disable Net stop wsearch EsentUtl.exe /d %AllUsersProfile%\Microsoft\Search\Data\Applications\Windows\Windows.edb Sc config wsearch start=delayed-auto Net start wsearch**  
+You can use this approach to reclaim empty space within the index database. Open an administrative Command Prompt window, and then run the following commands in the given order: <br />
+**Sc config wsearch start=disabled <br />
+Net stop wsearch <br />
+EsentUtl.exe /d %AllUsersProfile%\Microsoft\Search\Data\Applications\Windows\Windows.edb <br />
+Sc config wsearch start=delayed-auto <br />
+Net start wsearch <br />**  
 
 For more information about how to defragment the index database, see the following Knowledge Base article:
 
